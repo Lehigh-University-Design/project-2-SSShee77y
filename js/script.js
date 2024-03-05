@@ -11,13 +11,11 @@ window.addEventListener('scroll', function() {
     if (popupCounter == 0) { // Cookie settings
         let popup = document.getElementById('cookie-settings').parentElement;
         if (scrollPosition >= popup.offsetTop) {
-            popup.classList.add('fixed-popup');
             document.body.style.overflow = 'hidden';
         }
     } else if (popupCounter == 1) { // Info form
         let popup = document.getElementById('information-form').parentElement;
         if (scrollPosition >= popup.offsetTop) {
-            popup.classList.add('fixed-popup');
             document.body.style.overflow = 'hidden';
         }
     }
@@ -26,20 +24,25 @@ window.addEventListener('scroll', function() {
 function acceptCookies() {
     if (popupCounter <= 0) { // Cookie settings
         let popup = document.getElementById('cookie-settings');
-        popup.classList.remove('fixed-popup');
         document.body.style.overflow = 'auto';
         popupCounter = 1;
     } 
 }
 
-function submitForm(event) {
+function submitForm(event, popup) {
     event.preventDefault();
 
-    if (popupCounter <= 1) { // Info form
-        let popup = document.getElementById('information-form');
-        popup.classList.remove('fixed-popup');
-        document.body.style.overflow = 'auto';
-        popupCounter = 2;
+    let newCounter = 0;
+    if (popupCounter <= 1 && popup.id === 'information-form') {
+        newCounter = 2;
+    } else if (popupCounter <= 2 && popup.id === 'mailing-list') {
+        newCounter = 3;
     }
+
+    if (newCounter > 0) {
+        document.body.style.overflow = 'auto';
+        popupCounter = newCounter;
+    }
+    
     return true;
 }

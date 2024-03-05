@@ -62,7 +62,7 @@
         </div>
 
         <div class="popup light-mode">
-            <form class="popup-content" id="information-form" action="#" method="post" onsubmit="return submitForm(event)">
+            <form class="popup-content" id="information-form" action="#" method="post" onsubmit="return submitForm(event, this)">
                 <h1>Please enter your information below to the best of your abilities!</h1>
 
                 <!-- <label for="email">Email:</label>
@@ -376,6 +376,14 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil repellendus magni mollitia natus placeat qui ex voluptate odio dolorem. Blanditiis cupiditate eos aspernatur, dolorem sunt assumenda odio nemo ipsa est voluptas amet inventore ut! Consequuntur optio facilis eos cumque, non ducimus voluptate, similique fugit, repellat sint incidunt officia deleniti rem.</p>
                 <img src="https://placehold.co/400" alt="400x00">
             </div>
+        </div>
+        
+        <div class="popup light-mode">
+            <form class="popup-content" id="mailing-list" action="#" method="post" onsubmit="return submitEmail(event, this)">
+
+                <button id="accept-cookies" onclick="acceptCookies()">Accept</button>
+                <button id="deny-cookies">Deny</button>
+            </form>
         </div>
 
         <footer class="bookend">
