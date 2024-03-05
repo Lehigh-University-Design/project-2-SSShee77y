@@ -45,12 +45,12 @@
         </div>
 
         <div class="popup light-mode">
-            <div class="popup-content" id="cookie-settings">
+            <form class="popup-content" id="cookie-settings" action="#" method="post" onsubmit="return submitForm(event, this)">
                 <h1>Cookie Settings</h1>
                 <p>Please accept our cookies. We use cookies for tracking your every move on the internet, analyzing your web purchases, and occasionally telling your mother your most embarrassing mistakes, oops! By agreeing to this, you are accepting to sell your sou-, I mean our Cookie Policy.</p>
-                <button id="accept-cookies" onclick="acceptCookies()">Accept</button>
+                <button type="submit" id="accept-cookies">Accept</button>
                 <button id="deny-cookies">Deny</button>
-            </div>
+            </form>
         </div>
         
         <div class="slide">
@@ -372,24 +372,29 @@
         
         <div class="slide">
             <div class="slide-content">
-                <h1>STEP 3: SURVEYS</h1>
+                <h1>STEP 3: MAILING LIST</h1>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil repellendus magni mollitia natus placeat qui ex voluptate odio dolorem. Blanditiis cupiditate eos aspernatur, dolorem sunt assumenda odio nemo ipsa est voluptas amet inventore ut! Consequuntur optio facilis eos cumque, non ducimus voluptate, similique fugit, repellat sint incidunt officia deleniti rem.</p>
                 <img src="https://placehold.co/400" alt="400x00">
             </div>
         </div>
-        
-        <div class="popup light-mode">
-            <form class="popup-content" id="mailing-list" action="#" method="post" onsubmit="return submitEmail(event, this)">
 
-                <button id="accept-cookies" onclick="acceptCookies()">Accept</button>
-                <button id="deny-cookies">Deny</button>
+        <div class="popup light-mode">
+            <form class="popup-content" id="mailing-list" action="#" method="post" onsubmit="return submitForm(event, this)">
+
+                <h1 id="subscriber-count">Join the 62,257 Current Mailing List Subscribers</h1>
+                <p>Join our popular and well-rated mailing list to receive a weekly update from us! We promise not to sell your email to an advertisement service.</p>
+
+                <input type="email" name="email" placeholder="johndoe@email.com" required>
+
+                <button type="submit" id="accept-mailing">Accept</button>
+                <button id="deny-mailing">Deny</button>
             </form>
         </div>
 
         <footer class="bookend">
             <div class="grid">
                 <h1>FINALE</h1>
-                <p>The web dveloper's guide to modern user experience.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cum doloremque quia nobis fugiat numquam, blanditiis hic beatae doloribus maxime suscipit minus assumenda molestiae accusamus non eos? Cupiditate sunt dolorum quibusdam ut officiis, nam minus est perspiciatis ducimus voluptate accusantium. Fugit velit aperiam aliquam iste! Vel animi laboriosam omnis doloribus!</p>
                 <img src="https://placehold.co/400" alt="400x00">
                 
                 <button onclick="toggleLightMode()">Click Me Button</button>

@@ -60,6 +60,10 @@ h1 {
     border-bottom: 6px solid var(--color-accent-1);
 }
 
+p {
+    line-height: 150%;
+}
+
 img {
     border: 6px solid var(--color-accent-1);
 }
@@ -219,38 +223,47 @@ footer {
         display: grid;
         grid-template-columns: 2fr 2fr;
         grid-template-rows: auto auto;
+        column-gap: 30px;
         align-items: center;
         padding: 30px 40px;
         
-        h1 {
+        h1{
             border: 0;
+            font-family: 'Arial', sans-serif;
+            padding: 0;
+            font-weight: 700;
+            font-size: 36px;
+            text-align: center;
+            grid-column: span 2;
+        }
+        
+        p {
+            grid-column: span 2;
+        }
+        
+        button {
+            font-weight: 600;
+            font-size: 20px;
+            padding: 20px;
+        }
+        
+        input, select {
+            border-radius: 10px;
+            border:0;
+            padding: 10px;
         }
     }
 }
 
 #cookie-settings {
     width: 520px;
-    column-gap: 30px;
 
-    h1{
-        font-family: 'Arial', sans-serif;
-        padding: 0;
-        font-weight: 700;
-        font-size: 36px;
-        text-align: center;
-        grid-column: span 2;
+    h1 {
         margin-block: 12px 16px;
     }
 
     p {
-        grid-column: span 2;
         margin-bottom: 32px;
-    }
-
-    button {
-        font-weight: 600;
-        font-size: 20px;
-        padding: 20px;
     }
 
     #deny-cookies {
@@ -266,32 +279,28 @@ footer {
     text-align: right;
 
     h1{
-        font-family: 'Arial', sans-serif;
-        padding: 0;
-        font-weight: 700;
         font-size: 24px;
-        text-align: center;
-        grid-column: span 2;
-        margin-block: 12px 16px;
-    }
-
-    p {
-        grid-column: span 2;
-        margin-bottom: 32px;
+        margin-bottom: 16px;
     }
 
     button {
         grid-column: span 2;
-        font-weight: 600;
-        font-size: 20px;
         margin-top: 10px;
-        padding: 20px;
     }
+}
 
-    input, select {
-        border-radius: 10px;
-        border:0;
-        padding: 10px;
+#mailing-list {
+    width: 520px;
+    
+    input {
+        grid-column: span 2;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    #deny-mailing {
+        background-color: #b8b8b8;
+        color: var(--color-text-dark)
     }
 }
 
@@ -351,7 +360,6 @@ footer {
         }
     }
 
-
     #information-form {
         display: flex;
         flex-direction: column;
@@ -361,4 +369,11 @@ footer {
         }
     }
 
+    #mailing-list {
+        width: auto;
+
+        #accept-mailing {
+            margin-bottom: 15px;
+        }
+    }
 }
