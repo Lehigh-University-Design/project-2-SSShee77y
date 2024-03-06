@@ -398,7 +398,7 @@
             <form class="popup-content" id="mailing-list" action="#" method="post" onsubmit="return submitForm(event, this)">
 
                 <h1 id="subscriber-count">Join the 62,257 Current Mailing List Subscribers</h1>
-                <p>Join our popular and well-rated mailing list to receive a weekly update from us! We promise not to sell your email to an advertisement service.</p>
+                <p>Join the most popular and largest mailing list to receive a weekly update from us! We promise not to sell your email to an advertisement service.</p>
 
                 <input type="email" name="email" placeholder="johndoe@email.com" required>
 
@@ -416,17 +416,17 @@
         </div>
 
         <div class="popup light-mode" data-step="4">
-            <form class="popup-content" id="ad-to-close" action="#" method="post" onsubmit="return submitForm(event, this)">
+            <form class="popup-content ad-to-close" action="#" method="post" onsubmit="return submitForm(event, this)">
                 <a class="close-ad" type="submit" onclick="closeAd(this)" value="close-ad">X</a>
                 <h1>You may not rest now, there are hot singles in your area!</h1>
                 <a class="accept-ad" href="pages/bsd.html">Accept</a>
             </form>
-            <form class="popup-content" id="ad-to-close" action="#" method="post" onsubmit="return submitForm(event, this)">
+            <form class="popup-content ad-to-close" action="#" method="post" onsubmit="return submitForm(event, this)">
                 <a class="close-ad" type="submit" onclick="closeAd(this)" value="close-ad">X</a>
                 <h1>Does your toenail floss look like this? Try this new health hack!</h1>
                 <a class="accept-ad" href="pages/bsd.html">Yum Yum</a>
             </form>
-            <form class="popup-content" id="ad-to-close" action="#" method="post" onsubmit="return submitForm(event, this)">
+            <form class="popup-content ad-to-close" action="#" method="post" onsubmit="return submitForm(event, this)">
                 <a class="close-ad" type="submit" onclick="closeAd(this)" value="close-ad">X</a>
                 <h1>WARNING! Your Adobe Flash Player is out of date!</h1>
                 <a class="accept-ad" href="pages/bsd.html">Update Now</a>
@@ -494,8 +494,13 @@
                 
                 <button id="download-button">Download The PDF</button>
                 <script>
-                    document.getElementById("redirectButton").addEventListener("click", function() { window.location.href = "pages/bsd.html"; });
+                    document.getElementById("download-button").addEventListener("click", function() { window.location.href = "pages/bsd.html"; });
                 </script>
+
+                <div id="back-to-top">
+                    <a href="#" id="arrow-up">⇧</h2>
+                    <a href="#">Back To Top</h2>
+                </div>
             </div>
         </footer>
     </div>
