@@ -51,10 +51,9 @@ function toggleSidebar() {
  */
 window.addEventListener('scroll', function() {
     let scrollPosition = window.scrollY;
-    let scrollSpeed = scrollPosition / 8;
+    let scrollSpeed = scrollPosition / 12;
     let parallaxImage = document.getElementById("parallax-image");
     parallaxImage.style.backgroundPosition = `0px -${scrollSpeed}px`;
-    
 });
 
 /*
