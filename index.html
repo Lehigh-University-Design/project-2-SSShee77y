@@ -11,7 +11,10 @@
 <body>
     <div class="content">
         <div class="sidebar">
-            <span class="sidebar-button" onclick="toggleSidebar()">☰</span>
+            <div class="sidebar-buttons">
+                <span id="toggle-sidebar" onclick="toggleSidebar()">☰</span>
+                <span id="toggle-light" onclick="toggleLightMode()">☀</span>
+            </div>
             <div class="sidebar-content" id="sidebar-content">
                 <a href="#">Title</a>
                 <a href="#step-1" class="" data-step="1">Step 1</a>
@@ -441,7 +444,6 @@
                 <h1>FINALE</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cum doloremque quia nobis fugiat numquam, blanditiis hic beatae doloribus maxime suscipit minus assumenda molestiae accusamus non eos? Cupiditate sunt dolorum quibusdam ut officiis, nam minus est perspiciatis ducimus voluptate accusantium. Fugit velit aperiam aliquam iste! Vel animi laboriosam omnis doloribus!</p>
                 <img src="https://placehold.co/400" alt="400x00">
-                <button onclick="toggleLightMode()">Click Me Button</button>
             </div>
         </footer>
     </div>

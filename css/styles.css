@@ -119,6 +119,7 @@ button:hover {
         height: calc(100% - 70px);
         padding-top: 70px;
         background-color: var(--color-container-light);
+        box-shadow: 0px 0px 9px 1px #808080;
         transition: all 0.8s ease 0.2s;
 
         a {
@@ -148,7 +149,8 @@ button:hover {
     }
 
     .sidebar-open {
-        width: 250px;
+        width: 247px;
+        /* border-right: 3px solid #8f8f8f; */
         padding-left: 20px;
 
         a {
@@ -156,15 +158,30 @@ button:hover {
         }
     }
 
-    .sidebar-button {
-        color: var(--color-text-dark);
+    .sidebar-buttons {
+        color: var(--color-text);
         position: fixed;
+        display: flex;
+        gap: 10px;
         cursor: pointer;
         font-size: 36px;
         font-weight: 800;
         line-height: 100%;
-        opacity: 0.4;
+        opacity: .8;
         margin: 15px;
+
+        span {
+            text-shadow: 0px 0px 3px #404040;
+            transition: all 0s ease 0s;
+        }
+
+        #toggle-sidebar.toggled {
+            color: var(--color-accent-3);
+        }
+        
+        #toggle-light.toggled {
+            color: var(--color-accent-2);
+        }
     }
 }
 
@@ -506,14 +523,14 @@ footer {
             margin-bottom: 15px;
         }
     }
+    
+    .fixed-position {
+        overflow-y: hidden;
+    }
 }
 
 /* Overrides */
 
 .hidden {
     display: none;
-}
-
-.fixed-position {
-    position: fixed;
 }

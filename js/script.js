@@ -21,10 +21,10 @@ window.addEventListener('load', function () {
     }
 
     // Hide all steps
-    let allSteps = document.querySelectorAll('[data-step]');
-    allSteps.forEach(function(element) {
-        element.classList.add('hidden');
-    });
+    // let allSteps = document.querySelectorAll('[data-step]');
+    // allSteps.forEach(function(element) {
+    //     element.classList.add('hidden');
+    // });
 
     // Show first step
     steps[0].forEach(function(element) {
@@ -43,6 +43,7 @@ function toggleSidebar() {
     navbarContent.classList.toggle("sidebar-open");
     content.classList.toggle("content-right");
     document.body.classList.toggle("fixed-position");
+    document.getElementById("toggle-sidebar").classList.toggle("toggled");
 }
 
 /*

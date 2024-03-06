@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/ugj2myi.css">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: "urw-din", sans-serif;
+            background: #1f71cf;
+            color: #fefeff;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #page {
+            display: table;
+            height: 100%;
+            margin: 0 auto;
+            margin-top: -10px;
+            width: 70%;
+            font-size: 1.9vw;
+        }
+
+        #container {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: normal;
+            padding: 0;
+            margin: 25px 0;
+            margin-top: 0;
+            font-weight: 100;
+        }
+
+        h1 {
+            font-size: 6.5em;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        h3 {
+            font-size: 1.0em;
+        }
+        
+        h4 {
+            font-size: 0.75em;
+        }
+
+        #details {
+            display: flex;
+            flex-flow: row;
+            flex-wrap: nowrap;
+            padding-top: 10px;
+        }
+
+        #qr {
+            flex: 0 1 auto;
+        }
+
+        #image {
+            background: white;
+            padding: 5px;
+            line-height: 0;
+        }
+
+        #image img {
+            width: 5em;
+            height: 5em;
+        }
+
+        #stopcode {
+            margin-top: -8px;
+            padding-left: 20px;
+            flex: 1 1 auto;
+        }
+
+        @media (min-width: 840px) {
+            #page {
+                font-size: 140%;
+                width: 800px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Code modified from: https://codepen.io/xontab/pen/JrVaYR -->
+    <div id="page">
+        <div id="container">
+            <h1>:(</h1>
+            <h2>Your PC ran into a problem and needs to restart. We're just collecting some error info, and then we'll restart for you.</h2>
+            <span id="percentage">0</span>% complete</h2>
+            <br><br><br><br>
+            <div id="details">
+                <div id="qr">
+                    <div id="image">
+                        <img src="../images/malware_qr.png" alt="QR Code" />
+                    </div>
+                </div>
+                <div id="stopcode">
+                    <h3>For more information about this issue and possible fixes, visit https://www.windows.com/stopcode</h3>
+                    <h4>If you call a support person, give them this info:
+                    <br><br>What Failed: your-brain.exe
+                    <br>Stop Code: DETECTED_MALWARE_INJECTION</h4>
+                </div>
+            </div>
+        </div>
+    </div>    
+    
+    <script>
+        var percentageElement = document.getElementById("percentage");
+        var percentage = 0;
+
+        function process() {
+            percentage += parseInt(7 - Math.sqrt(Math.random() * 50));
+            if (percentage > 100) {
+                percentage = 100;
+            }
+            percentageElement.innerText = percentage;
+            processInterval();
+        }
+
+        function processInterval() {
+            setTimeout(process, Math.random() * 3200 + 800)
+        }
+        processInterval();
+    </script>
+</body>
+</html>
