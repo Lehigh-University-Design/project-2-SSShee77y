@@ -68,6 +68,11 @@ img {
     border: 6px solid var(--color-accent-1);
 }
 
+input {
+    margin: 0;
+    padding: 0;
+}
+
 button {
     background-color: var(--color-accent-3);
     color: var(--color-text-light);
@@ -144,7 +149,7 @@ button:hover {
         }
 
         h1 {
-            font-size: max(60px, 3.75vw);
+            font-size: clamp(60px, 3.75vw, 72px);
         }
 
         p {
@@ -167,7 +172,7 @@ footer {
     border-top: 6px solid var(--color-accent-1);
     h1 {
         width: calc(100% - 90px);
-        font-size: max(60px, 3.75vw);
+        font-size: clamp(60px, 3.75vw, 72px);
         grid-column: span 2;
     }
 }
@@ -180,7 +185,6 @@ footer {
     margin: auto;
     display: flex;
     align-items: center;
-    overflow: visible; 
     scroll-behavior: smooth;
 
     .slide-content {
@@ -199,7 +203,7 @@ footer {
         padding: 30px 30px 50px 30px;
 
         h1 {
-            font-size: max(30px, 3vw);
+            font-size: clamp(30px, 3.75vw, 56px);
             grid-column: span 2;
         }
 
@@ -286,6 +290,7 @@ footer {
 }
 
 #information-form {
+    max-width: calc(100vw - 80px);
     grid-template-columns: 1fr 2fr;
     column-gap: 10px;
     row-gap: 8px;
@@ -304,6 +309,7 @@ footer {
 
 #mailing-list {
     width: 520px;
+    max-width: calc(100vw - 80px);
     
     input {
         grid-column: span 2;
@@ -320,6 +326,7 @@ footer {
 /* mobile */
 @media only screen and (max-width: 800px) {
     header.bookend {
+        margin-bottom: 20%;
         .grid {
             padding-block: 5vh;
             display: flex;
@@ -337,18 +344,19 @@ footer {
     }
 
     footer.bookend {
+        margin-top: 20%;
         .grid {
             padding-block: 5vh;
             display: flex;
             flex-direction: column;
         }
-
     }
 
     .slide {
+        height: 100%;
         width: auto;
         padding-inline: 0px;
-        margin-block: 10vh;
+        margin-block: 20%;
         display: flex;
         align-items: center;
         overflow: visible;
@@ -367,8 +375,9 @@ footer {
     }
     
     .popup {
+        min-height: 100%;
         padding-inline: 0px;
-        margin-block: 20vh;
+        margin-block: 20%;
         display: flex;
         align-items: center;
     
