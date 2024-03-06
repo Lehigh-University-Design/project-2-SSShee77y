@@ -50,28 +50,8 @@ function toggleSidebar() {
  *  Popup variables and functions
  */
 
-// Lock / update scroll when reached a popup
+// Release hidden on form submission
 var popupCounter = 0;
-window.addEventListener('scroll', function() {
-    var scrollPosition = window.scrollY;
-
-    let popup = null;
-
-    if (popupCounter == 0) { // Cookie settings
-        popup = document.getElementById('cookie-settings').parentElement;
-    } else if (popupCounter == 1) { // Info form
-        popup = document.getElementById('information-form').parentElement;
-    } else if (popupCounter == 2) { // Mailing list
-        popup = document.getElementById('mailing-list').parentElement;
-    }
-
-    if (popup != null && scrollPosition >= popup.offsetTop) {
-        // document.body.style.overflow = 'hidden';
-    }
-
-});
-
-// Release scroll on form submission
 function submitForm(event, popup) {
     event.preventDefault();
 
@@ -88,10 +68,13 @@ function submitForm(event, popup) {
         // let str = "You are Now a Part of the " + numStr + " Current Mailing List Subscribers";
         let str = "Join the " + numStr + " Current Mailing List Subscribers";
         subHeader.innerHTML = str;
-    }
+    } else if (popupCounter <= 3 && popup.id === 'ad-to-close') {
+        newCounter = 4;
+    } else if (popupCounter <= 4 && popup.id === 'ad-to-close') {
+        newCounter = 5;
+    } 
 
     if (newCounter > 0) {
-        document.body.style.overflow = 'auto';
         popupCounter = newCounter;
         steps[newCounter].forEach(function(element) {
             element.classList.remove('hidden');
@@ -120,3 +103,8 @@ function increaseSubscribers() {
     setTimeout(increaseSubscribers, randomInterval);
 }
 increaseSubscribers();
+
+function closeAd(ad) {
+    let advert = ad.parentElement;
+    advert.classList.add('hidden');
+}

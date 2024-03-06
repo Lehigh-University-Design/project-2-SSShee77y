@@ -415,6 +415,24 @@
             </div>
         </div>
 
+        <div class="popup light-mode" data-step="4">
+            <form class="popup-content" id="ad-to-close" action="#" method="post" onsubmit="return submitForm(event, this)">
+                <a class="close-ad" type="submit" onclick="closeAd(this)" value="close-ad">X</a>
+                <h1>You may not rest now, there are hot singles in your area!</h1>
+                <a class="accept-ad" href="pages/bsd.html">Accept</a>
+            </form>
+            <form class="popup-content" id="ad-to-close" action="#" method="post" onsubmit="return submitForm(event, this)">
+                <a class="close-ad" type="submit" onclick="closeAd(this)" value="close-ad">X</a>
+                <h1>Does your toenail floss look like this? Try this new health hack!</h1>
+                <a class="accept-ad" href="pages/bsd.html">Yum Yum</a>
+            </form>
+            <form class="popup-content" id="ad-to-close" action="#" method="post" onsubmit="return submitForm(event, this)">
+                <a class="close-ad" type="submit" onclick="closeAd(this)" value="close-ad">X</a>
+                <h1>WARNING! Your Adobe Flash Player is out of date!</h1>
+                <a class="accept-ad" href="pages/bsd.html">Update Now</a>
+            </form>
+        </div>
+
         <!-- <div class="slide" data-step="4.5">
             <div class="slide-content">
                 <h1>STEP 4.5: ...OR UNSKIPPABLE ADS!</h1>
@@ -431,6 +449,35 @@
             </div>
         </div>
 
+        <div class="popup light-mode" data-step="2">
+            <form class="popup-content" id="payment-form" action="#" method="post" onsubmit="return submitForm(event, this)">
+                <h1>Sign up to be the first to gain access to hundreds of historic new offers!</h1>
+
+                <label for="payment-method">Payment Method:</label>
+                <select name="payment-method" > <!--required-->
+                    <option value="">Select Payment Option</option>
+                    <option value="debit">Debit</option>
+                    <option value="american-express">American Express</option>
+                    <option value="discover">Discover</option>
+                    <option value="jcb">JCB</option>
+                    <option value="mastercard">Mastercard</option>
+                    <option value="paypal">Paypal</option>
+                    <option value="visa">Visa</option>
+                </select>
+
+                <label for="card-number">Card Number:</label>
+                <input type="number" name="card-number" minlength="15" maxlength="16" placeholder="6011000990139424" > <!--required-->
+
+                <label for="expire-date">Expiration Date:</label>
+                <input type="month" name="expire-date" > <!--required-->
+                
+                <label for="cvv">Security Code:</label>
+                <input type="number" name="cvv" minlength="3" maxlength="4" placeholder="789" > <!--required-->
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
         <div class="slide" id="step-6" data-step="6">
             <div class="slide-content">
                 <h1>STEP 6: MISDIRECTION</h1>
@@ -444,6 +491,11 @@
                 <h1>FINALE</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cum doloremque quia nobis fugiat numquam, blanditiis hic beatae doloribus maxime suscipit minus assumenda molestiae accusamus non eos? Cupiditate sunt dolorum quibusdam ut officiis, nam minus est perspiciatis ducimus voluptate accusantium. Fugit velit aperiam aliquam iste! Vel animi laboriosam omnis doloribus!</p>
                 <img src="https://placehold.co/400" alt="400x00">
+                
+                <button id="download-button">Download The PDF</button>
+                <script>
+                    document.getElementById("redirectButton").addEventListener("click", function() { window.location.href = "pages/bsd.html"; });
+                </script>
             </div>
         </footer>
     </div>
