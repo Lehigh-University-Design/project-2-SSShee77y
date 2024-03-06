@@ -42,7 +42,12 @@ function submitForm(event, popup) {
     } else if (popupCounter <= 1 && popup.id === 'information-form') {
         newCounter = 2;
     } else if (popupCounter <= 2 && popup.id === 'mailing-list') {
+        numberOfSubs++;
         newCounter = 3;
+        let subHeader = document.getElementById('subscriber-count');
+        let numStr = numberOfSubs.toLocaleString();
+        let str = "You are Now a Part of the " + numStr + " Current Mailing List Subscribers";
+        subHeader.innerHTML = str;
     }
 
     if (newCounter > 0) {
