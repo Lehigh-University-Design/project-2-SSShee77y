@@ -5,14 +5,40 @@
 function toggleLightMode() {
     document.body.classList.toggle('light-mode');
 }
+
+/*
+ *  On page load
+ */
+
+var steps = [];
+var stepNum = [1, 2, 3, 4, 5, 6, 99];
+
+window.addEventListener('load', function () {
+    // Assign elements to each step
+    for (let i = 0; i < stepNum.length; i++) {
+        let stepElements = document.querySelectorAll('[data-step="'+stepNum[i]+'"]');
+        steps.push(stepElements)
+    }
+
+    // Hide all steps
+    let allSteps = document.querySelectorAll('[data-step]');
+    allSteps.forEach(function(element) {
+        element.classList.add('hidden');
+    });
+
+    // Show first step
+    steps[0].forEach(function(element) {
+        element.classList.remove('hidden');
+    });
+
+});
+
 /*
  *  Popup variables and functions
  */
 
-// Variables
-var popupCounter = 0
-
 // Lock / update scroll when reached a popup
+var popupCounter = 0;
 window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
 
@@ -27,7 +53,7 @@ window.addEventListener('scroll', function() {
     }
 
     if (popup != null && scrollPosition >= popup.offsetTop) {
-        document.body.style.overflow = 'hidden';
+        // document.body.style.overflow = 'hidden';
     }
 
 });
@@ -46,13 +72,17 @@ function submitForm(event, popup) {
         newCounter = 3;
         let subHeader = document.getElementById('subscriber-count');
         let numStr = numberOfSubs.toLocaleString();
-        let str = "You are Now a Part of the " + numStr + " Current Mailing List Subscribers";
+        // let str = "You are Now a Part of the " + numStr + " Current Mailing List Subscribers";
+        let str = "Join the " + numStr + " Current Mailing List Subscribers";
         subHeader.innerHTML = str;
     }
 
     if (newCounter > 0) {
         document.body.style.overflow = 'auto';
         popupCounter = newCounter;
+        steps[newCounter].forEach(function(element) {
+            element.classList.remove('hidden');
+        });
     }
 
     return true;

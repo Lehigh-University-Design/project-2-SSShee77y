@@ -68,7 +68,7 @@ img {
     border: 6px solid var(--color-accent-1);
 }
 
-input {
+input, section {
     margin: 0;
     padding: 0;
 }
@@ -110,10 +110,10 @@ button:hover {
 .bookend {
     background-color: var(--color-container);
     color: var(--color-text-main);
-    transition: all 0.3s ease 0s;
     box-shadow: 0px 0px 20px 0px var(--color-accent-1);
+    transition: all 0.3s ease 0s;
+    scroll-behavior: smooth;
 
-    overflow: visible;
     min-height: 100vh;
     width: calc(100% - 40px);
     display: flex;
@@ -227,7 +227,6 @@ footer {
     margin: auto;
     display: flex;
     align-items: center;
-    overflow: visible; 
     scroll-behavior: smooth;
 
     .popup-content {
@@ -290,7 +289,7 @@ footer {
 }
 
 #information-form {
-    max-width: calc(100vw - 80px);
+    max-width: 100vw;
     grid-template-columns: 1fr 2fr;
     column-gap: 10px;
     row-gap: 8px;
@@ -309,7 +308,7 @@ footer {
 
 #mailing-list {
     width: 520px;
-    max-width: calc(100vw - 80px);
+    max-width: 100vw;
     
     input {
         grid-column: span 2;
@@ -359,7 +358,6 @@ footer {
         margin-block: 20%;
         display: flex;
         align-items: center;
-        overflow: visible;
 
         .slide-content {
             border-inline: 0px;
@@ -397,6 +395,7 @@ footer {
     }
 
     #information-form {
+        max-width: calc(100vw - 80px);
         width: auto;
 
         display: flex;
@@ -408,10 +407,17 @@ footer {
     }
 
     #mailing-list {
+        max-width: calc(100vw - 80px);
         width: auto;
 
         #accept-mailing {
             margin-bottom: 15px;
         }
     }
+}
+
+/* Hidden override */
+
+.hidden {
+    display: none;
 }
