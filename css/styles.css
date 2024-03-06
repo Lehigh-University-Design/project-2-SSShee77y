@@ -227,12 +227,12 @@ button:hover {
     }
 
     .grid {
-        padding-block: 5vh 20vh;
+        padding-block: 10vh 15vh;
         flex-grow: 1;
         display: grid;
         place-items: center;
         grid-template-columns: 2fr 2fr;
-        grid-template-rows: auto auto;
+        /* grid-template-rows: auto auto; */
         width: min(1200px, 100%);
         gap: 40px;
 
