@@ -108,7 +108,8 @@ button:hover {
     transition: all 0.3s ease 0s;
     box-shadow: 0px 0px 20px 0px var(--color-accent-1);
 
-    height: 100vh;
+    overflow: visible;
+    min-height: 100vh;
     width: calc(100% - 40px);
     display: flex;
     flex-direction: column;
@@ -179,7 +180,7 @@ footer {
     margin: auto;
     display: flex;
     align-items: center;
-    overflow:auto; 
+    overflow: visible; 
     scroll-behavior: smooth;
 
     .slide-content {
@@ -195,7 +196,7 @@ footer {
         grid-template-columns: 2fr 2fr;
         grid-template-rows: auto auto;
         row-gap: 30px;
-        padding: 30px;
+        padding: 30px 30px 50px 30px;
 
         h1 {
             font-size: max(30px, 3vw);
@@ -217,12 +218,12 @@ footer {
 
 /* Popups */
 .popup {
-    height: 100vh;
+    min-height: 100vh;
     padding: 20px;
     margin: auto;
     display: flex;
     align-items: center;
-    overflow:auto; 
+    overflow: visible; 
     scroll-behavior: smooth;
 
     .popup-content {
@@ -320,6 +321,7 @@ footer {
 @media only screen and (max-width: 800px) {
     header.bookend {
         .grid {
+            padding-block: 5vh;
             display: flex;
             flex-direction: column;
         }
@@ -330,20 +332,33 @@ footer {
         }
 
         div {
-            order: 2
+            order: 2;
         }
     }
 
+    footer.bookend {
+        .grid {
+            padding-block: 5vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+
     .slide {
-        width: 100%;
-        padding: 20px 0px;
-        margin-inline: 0;
-        border-inline: 0;
+        width: auto;
+        padding-inline: 0px;
+        margin-block: 10vh;
+        display: flex;
+        align-items: center;
+        overflow: visible;
 
         .slide-content {
+            border-inline: 0px;
             display: flex;
             flex-direction: column;
             align-items: center;
+
             img {
                 width: 80%;
                 margin: auto;
@@ -352,12 +367,10 @@ footer {
     }
     
     .popup {
-        height: auto;
-        padding: 20px 0px;
+        padding-inline: 0px;
         margin-block: 20vh;
         display: flex;
         align-items: center;
-        overflow:auto; 
     
         .popup-content {
             display: flex;
@@ -375,6 +388,8 @@ footer {
     }
 
     #information-form {
+        width: auto;
+
         display: flex;
         flex-direction: column;
         text-align: left;
