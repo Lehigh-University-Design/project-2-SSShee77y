@@ -416,17 +416,17 @@
         </div>
 
         <div class="popup light-mode" data-step="4">
-            <form class="popup-content ad-to-close" action="#" method="post" onsubmit="return submitForm(event, this)">
-                <a class="close-ad" type="submit" onclick="closeAd(this)" value="close-ad">X</a>
+            <form class="popup-content" id="ad-to-close-1" action="#" method="post" onsubmit="return submitForm(event, this)">
+                <a class="close-ad" type="submit" onclick="closeAd(this); submitForm(event, this.parentNode);" value="close-ad">X</a>
                 <h1>You may not rest now, there are hot singles in your area!</h1>
                 <a class="accept-ad" href="pages/bsd.html">Accept</a>
             </form>
-            <form class="popup-content ad-to-close" action="#" method="post" onsubmit="return submitForm(event, this)">
+            <form class="popup-content" id="ad-to-close-2" action="#" method="post" onsubmit="return submitForm(event, this)">
                 <a class="close-ad" type="submit" onclick="closeAd(this)" value="close-ad">X</a>
                 <h1>Does your toenail floss look like this? Try this new health hack!</h1>
                 <a class="accept-ad" href="pages/bsd.html">Yum Yum</a>
             </form>
-            <form class="popup-content ad-to-close" action="#" method="post" onsubmit="return submitForm(event, this)">
+            <form class="popup-content" id="ad-to-close-3" action="#" method="post" onsubmit="return submitForm(event, this)">
                 <a class="close-ad" type="submit" onclick="closeAd(this)" value="close-ad">X</a>
                 <h1>WARNING! Your Adobe Flash Player is out of date!</h1>
                 <a class="accept-ad" href="pages/bsd.html">Update Now</a>
@@ -449,7 +449,7 @@
             </div>
         </div>
 
-        <div class="popup light-mode" data-step="2">
+        <div class="popup light-mode" data-step="5">
             <form class="popup-content" id="payment-form" action="#" method="post" onsubmit="return submitForm(event, this)">
                 <h1>Sign up to be the first to gain access to hundreds of historic new offers!</h1>
 
@@ -486,7 +486,7 @@
             </div>
         </div>
 
-        <footer class="bookend" id="finale" data-step="99">
+        <footer class="bookend" id="finale" data-step="6">
             <div class="grid">
                 <h1>FINALE</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cum doloremque quia nobis fugiat numquam, blanditiis hic beatae doloribus maxime suscipit minus assumenda molestiae accusamus non eos? Cupiditate sunt dolorum quibusdam ut officiis, nam minus est perspiciatis ducimus voluptate accusantium. Fugit velit aperiam aliquam iste! Vel animi laboriosam omnis doloribus!</p>

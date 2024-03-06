@@ -21,10 +21,10 @@ window.addEventListener('load', function () {
     }
 
     // Hide all steps
-    // let allSteps = document.querySelectorAll('[data-step]');
-    // allSteps.forEach(function(element) {
-    //     element.classList.add('hidden');
-    // });
+    let allSteps = document.querySelectorAll('[data-step]');
+    allSteps.forEach(function(element) {
+        element.classList.add('hidden');
+    });
 
     // Show first step
     steps[0].forEach(function(element) {
@@ -68,9 +68,10 @@ function submitForm(event, popup) {
         // let str = "You are Now a Part of the " + numStr + " Current Mailing List Subscribers";
         let str = "Join the " + numStr + " Current Mailing List Subscribers";
         subHeader.innerHTML = str;
-    } else if (popupCounter <= 3 && popup.id === 'ad-to-close') {
+    } else if (popupCounter <= 3 && popup.id === 'ad-to-close-1' || popup.id === 'ad-to-close-2' || popup.id === 'ad-to-close-3') {
+        console.log("check check");
         newCounter = 4;
-    } else if (popupCounter <= 4 && popup.id === 'ad-to-close') {
+    } else if (popupCounter <= 4 && popup.id === 'payment-form') {
         newCounter = 5;
     } 
 
