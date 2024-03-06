@@ -34,6 +34,18 @@ window.addEventListener('load', function () {
 });
 
 /*
+ *  Navbar
+ */
+
+function toggleSidebar() {
+    let navbarContent = document.getElementById("sidebar-content");
+    let content = document.querySelector(".content");
+    navbarContent.classList.toggle("sidebar-open");
+    content.classList.toggle("content-right");
+    document.body.classList.toggle("fixed-position");
+}
+
+/*
  *  Popup variables and functions
  */
 

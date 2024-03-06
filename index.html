@@ -11,7 +11,17 @@
 <body>
     <div class="content">
         <div class="sidebar">
-            
+            <span class="sidebar-button" onclick="toggleSidebar()">☰</span>
+            <div class="sidebar-content" id="sidebar-content">
+                <a href="#">Title</a>
+                <a href="#step-1" class="" data-step="1">Step 1</a>
+                <a href="#step-2" class="" data-step="2">Step 2</a>
+                <a href="#step-3" class="" data-step="3">Step 3</a>
+                <a href="#step-4" class="" data-step="4">Step 4</a>
+                <a href="#step-5" class="" data-step="5">Step 5</a>
+                <a href="#step-6" class="" data-step="6">Step 6</a>
+                <a href="#finale" class="" data-step="99">Finale</a>
+            </div>
         </div>
 
         <header class="bookend">
@@ -36,8 +46,8 @@
             </div>
         </div>
         
-        <div class="slide">
-            <div class="slide-content" data-step="1">
+        <div class="slide" id="step-1" data-step="1">
+            <div class="slide-content">
                 <h1>STEP 1: CONSUMING COOKIES</h1>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil repellendus magni mollitia natus placeat qui ex voluptate odio dolorem. Blanditiis cupiditate eos aspernatur, dolorem sunt assumenda odio nemo ipsa est voluptas amet inventore ut! Consequuntur optio facilis eos cumque, non ducimus voluptate, similique fugit, repellat sint incidunt officia deleniti rem.</p>
                 <img src="https://placehold.co/400" alt="400x00">
@@ -53,7 +63,7 @@
             </form>
         </div>
         
-        <div class="slide" data-step="2">
+        <div class="slide" id="step-2" data-step="2">
             <div class="slide-content">
                 <h1>STEP 2: SURVEYS</h1>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil repellendus magni mollitia natus placeat qui ex voluptate odio dolorem. Blanditiis cupiditate eos aspernatur, dolorem sunt assumenda odio nemo ipsa est voluptas amet inventore ut! Consequuntur optio facilis eos cumque, non ducimus voluptate, similique fugit, repellat sint incidunt officia deleniti rem.</p>
@@ -370,7 +380,7 @@
             </form>
         </div>
         
-        <div class="slide" data-step="3">
+        <div class="slide" id="step-3" data-step="3">
             <div class="slide-content">
                 <h1>STEP 3: MAILING LIST</h1>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil repellendus magni mollitia natus placeat qui ex voluptate odio dolorem. Blanditiis cupiditate eos aspernatur, dolorem sunt assumenda odio nemo ipsa est voluptas amet inventore ut! Consequuntur optio facilis eos cumque, non ducimus voluptate, similique fugit, repellat sint incidunt officia deleniti rem.</p>
@@ -394,7 +404,7 @@
             </form>
         </div>
 
-        <div class="slide" data-step="4">
+        <div class="slide" id="step-4" data-step="4">
             <div class="slide-content">
                 <h1>STEP 4: ADS, UNLIMITED ADS...</h1>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil repellendus magni mollitia natus placeat qui ex voluptate odio dolorem. Blanditiis cupiditate eos aspernatur, dolorem sunt assumenda odio nemo ipsa est voluptas amet inventore ut! Consequuntur optio facilis eos cumque, non ducimus voluptate, similique fugit, repellat sint incidunt officia deleniti rem.</p>
@@ -410,7 +420,7 @@
             </div>
         </div> -->
 
-        <div class="slide" data-step="5">
+        <div class="slide" id="step-5" data-step="5">
             <div class="slide-content">
                 <h1>STEP 5: TRIALS AND TRIBULATIONS</h1>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil repellendus magni mollitia natus placeat qui ex voluptate odio dolorem. Blanditiis cupiditate eos aspernatur, dolorem sunt assumenda odio nemo ipsa est voluptas amet inventore ut! Consequuntur optio facilis eos cumque, non ducimus voluptate, similique fugit, repellat sint incidunt officia deleniti rem.</p>
@@ -418,7 +428,7 @@
             </div>
         </div>
 
-        <div class="slide" data-step="6">
+        <div class="slide" id="step-6" data-step="6">
             <div class="slide-content">
                 <h1>STEP 6: MISDIRECTION</h1>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil repellendus magni mollitia natus placeat qui ex voluptate odio dolorem. Blanditiis cupiditate eos aspernatur, dolorem sunt assumenda odio nemo ipsa est voluptas amet inventore ut! Consequuntur optio facilis eos cumque, non ducimus voluptate, similique fugit, repellat sint incidunt officia deleniti rem.</p>
@@ -426,7 +436,7 @@
             </div>
         </div>
 
-        <footer class="bookend" data-step="99">
+        <footer class="bookend" id="finale" data-step="99">
             <div class="grid">
                 <h1>FINALE</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cum doloremque quia nobis fugiat numquam, blanditiis hic beatae doloribus maxime suscipit minus assumenda molestiae accusamus non eos? Cupiditate sunt dolorum quibusdam ut officiis, nam minus est perspiciatis ducimus voluptate accusantium. Fugit velit aperiam aliquam iste! Vel animi laboriosam omnis doloribus!</p>

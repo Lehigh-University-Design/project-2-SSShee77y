@@ -10,13 +10,18 @@
 
     /* Text Color */
     --color-text-dark: #000000;
+    --color-text-gray: #3a3a3a;
     --color-text-light: #fafafa;
+
+    /* Container Colors */
+    --color-container-dark: #213343;
+    --color-container-light: #e0e0e0;
 
     /* Primary Color (Background) */
     --color-primary: #1e1e1e;
 
     /* Container */
-    --color-container: #213343;
+    --color-container: var(--color-container-dark);
 
     /* Main Text */
     --color-text-main: var(--color-text-light);
@@ -27,7 +32,7 @@
     --color-primary: #fafafa;
 
     /* Container */
-    --color-container: #e0e0e0;
+    --color-container: var(--color-container-light);
 
     /* Text Color */
     --color-text-main: var(--color-text-dark);
@@ -40,6 +45,10 @@
 }
 
 /* General */
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: var(--color-primary);
@@ -91,10 +100,72 @@ button:hover {
 /* Class Specific */
 
 .sidebar {
-    height: 100vh;
-    /* width: 300px; */
-    background-color: #ffffff;
     position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    width: 50px;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .sidebar-content {
+        display: flex;
+        flex-direction: column;
+        width: 0px;
+        gap: 8px;
+        height: calc(100% - 70px);
+        padding-top: 70px;
+        background-color: var(--color-container-light);
+        transition: all 0.8s ease 0.2s;
+
+        a {
+            position: relative;
+            font-family: "urw-din", sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            white-space: nowrap;
+            margin: 0;
+            color: var(--color-text-gray);
+            text-decoration: none;
+            transform: translateX(-200px);
+            transition: all .8s ease 0s;
+        }
+
+        a:nth-child(2) { transition-delay: .10s; }
+        a:nth-child(3) { transition-delay: .20s; }
+        a:nth-child(4) { transition-delay: .30s; }
+        a:nth-child(5) { transition-delay: .40s; }
+        a:nth-child(6) { transition-delay: .50s; }
+        a:nth-child(7) { transition-delay: .60s; }
+        a:nth-child(8) { transition-delay: .70s; }
+    
+        a:hover {
+            
+        }
+    }
+
+    .sidebar-open {
+        width: 250px;
+        padding-left: 20px;
+
+        a {
+            transform: translateX(0px);
+        }
+    }
+
+    .sidebar-button {
+        color: var(--color-text-dark);
+        position: fixed;
+        cursor: pointer;
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 100%;
+        opacity: 0.4;
+        margin: 15px;
+    }
 }
 
 .content {
@@ -102,9 +173,15 @@ button:hover {
     flex-direction: column;
     align-items: center;
     height: auto;
-    width: auto;
-    padding: 0;
-    margin: 0;
+    width: 100%;
+    padding: auto;
+    margin: auto;
+    transition: all 0.8s ease 0.2s;
+}
+
+.content-right {
+    width: calc(100% - 250px);
+    padding-left: 250px;
 }
 
 .bookend {
@@ -112,7 +189,6 @@ button:hover {
     color: var(--color-text-main);
     box-shadow: 0px 0px 20px 0px var(--color-accent-1);
     transition: all 0.3s ease 0s;
-    scroll-behavior: smooth;
 
     min-height: 100vh;
     width: calc(100% - 40px);
@@ -185,7 +261,6 @@ footer {
     margin: auto;
     display: flex;
     align-items: center;
-    scroll-behavior: smooth;
 
     .slide-content {
         max-width: 900px;
@@ -221,13 +296,13 @@ footer {
 }
 
 /* Popups */
+
 .popup {
     min-height: 100vh;
     padding: 20px;
     margin: auto;
     display: flex;
     align-items: center;
-    scroll-behavior: smooth;
 
     .popup-content {
         border-radius: 20px;
@@ -324,6 +399,23 @@ footer {
 
 /* mobile */
 @media only screen and (max-width: 800px) {
+    .sidebar {
+
+        .sidebar-open {
+            width: 100vw;
+            padding-left: 20px;
+    
+            a {
+                transform: translateX(0px);
+            }
+        }
+    }
+
+    .content-right {
+        width: 100%;
+        padding-left: 0px;
+    }
+
     header.bookend {
         margin-bottom: 20%;
         .grid {
@@ -416,8 +508,12 @@ footer {
     }
 }
 
-/* Hidden override */
+/* Overrides */
 
 .hidden {
     display: none;
+}
+
+.fixed-position {
+    position: fixed;
 }
