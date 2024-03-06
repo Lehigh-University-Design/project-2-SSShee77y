@@ -47,6 +47,17 @@ function toggleSidebar() {
 }
 
 /*
+ *  Parallax Background
+ */
+window.addEventListener('scroll', function() {
+    let scrollPosition = window.scrollY;
+    let scrollSpeed = scrollPosition / 8;
+    let parallaxImage = document.getElementById("parallax-image");
+    parallaxImage.style.backgroundPosition = `0px -${scrollSpeed}px`;
+    
+});
+
+/*
  *  Popup variables and functions
  */
 

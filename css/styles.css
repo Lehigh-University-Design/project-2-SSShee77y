@@ -59,6 +59,26 @@ body {
     font-family: Helvetica, sans-serif;
 }
 
+#parallax-image {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: auto;
+    margin: auto;
+    z-index: -1;
+
+    background-image: 
+        url("../images/diagonal.png");
+    background-size: 200px 200px;
+
+    background-position-y: 100px;
+
+    opacity: 0.02;
+}
+
 h1 {
     font-family: "urw-din-condensed", sans-serif;
     font-weight: 1000;
